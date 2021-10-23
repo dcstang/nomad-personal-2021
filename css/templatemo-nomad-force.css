@@ -1,7 +1,7 @@
 /*
 
 TemplateMo 567 Nomad Force
-
+Adapted by David Tang 2021
 https://templatemo.com/tm-567-nomad-force
 
 */
@@ -386,6 +386,12 @@ strong {
   transform: translate(-50%, -50%);
   width: 85%;
   text-align: center;
+}
+
+.heroPic {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
 }
 
 /*---------------------------------------
