@@ -225,6 +225,8 @@ strong {
   left: 0;
   padding-top: 15px;
   padding-bottom: 15px;
+  position:-webkit-sticky;
+  position:sticky;
 }
 
 .navbar-brand {
@@ -358,6 +360,7 @@ strong {
 .hero {
   position: relative;
   overflow: hidden;
+  min-height: 450px;
 }
 
 @media screen and (min-width: 992px) {
@@ -663,6 +666,13 @@ strong {
   .news-two-column {
     min-height: 232.5px;
   }
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position:-webkit-sticky;
+    position:sticky;
+    top: 0;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -693,6 +703,9 @@ strong {
   .navbar {
     padding-top: 10px;
     padding-bottom: 10px;
+    position:-webkit-sticky;
+    position:sticky;
+    top: 0;
   }
 
   .section-padding {
@@ -719,6 +732,13 @@ strong {
   .news-detail-title {
     font-size: 36px;
   }
+
+  .navbar {    
+    position:-webkit-sticky;
+    position:sticky;
+    z-index:1050;
+    top:0;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -729,22 +749,81 @@ strong {
   .heroText p {
     font-size: 14px;
   }
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position:fixed;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:1050;
+  }
+  /* fix padding under menu after resize */
+  body { 
+    margin-bottom: 90px; 
+  }      
+}
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position:fixed;
+    top: auto;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:1050;
+  }
+  /* fix padding under menu after resize */
+  html { 
+    margin-bottom: 90px; 
+  }      
 }
 
 @media screen and (max-width: 359px) {
   .news-detail-title {
     font-size: 22px;
   }
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position:fixed;
+    right:0;
+    bottom:0;
+    left:0;
+    top:auto;
+    z-index:1050;
+  }
+  /* fix padding under menu after resize */
+  body { 
+    padding-top: 200px; 
+  }      
 }
 
-/*-------------------
-*/
+/*----------------------------------
+      SKILLS SECTION
+------------------------------------*/
 
-.image-fade-hero img {
-  margin-right: 14px;
-  display: block;
-  float: left;
-  box-shadow: 3px 3px 1px #ccc;
-  -webkit-box-shadow: 3px 3px 1px #ccc;
-  -moz-box-shadow: 3px 3px 1px #ccc;
+.skills-card-img{
+    object-fit: contain;
+}
+
+.card-text {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 450px) {
+  .skills-card-img{
+    height: 30vh;
+    object-fit: contain;
+  }
+}
+
+
+@media screen and (max-width: 2000px) {
+  .skills-card-img{
+    height: 10vh;
+    object-fit: contain;
+  }
 }
